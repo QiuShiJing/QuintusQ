@@ -10,7 +10,6 @@
         birthday = form.birthday.value;  
         email = form.email.value;  
 
-/* ********FOUND********* */
         if(userpass2 != userpass2)  
         {  
             alert("两次输入的密码不相同！");
@@ -18,7 +17,7 @@
 	    return false;  
         }  
           
-/* ********FOUND********* */
+
         if(!isDate(birthday))  
         {  
             alert("生日的格式不正确！");  
@@ -26,7 +25,7 @@
             return false;  
         }  
           
-/* ********FOUND********* */
+
         if(!isMail(email))  
         { 
 	    alert("Email格式不正确！");  
@@ -171,8 +170,8 @@
 
 <tr>
 <td>&nbsp;</td>
-<td > <input type="reset" value="重置">  
-   <input type="submit" value="提交">
+<td><input type="reset" value="重置">  
+    <input type="submit" value="提交">
     <input type="submit" name="button" value="关闭窗口" onclick="window.close()"></td></tr>  
    </table>  
 </form>  
