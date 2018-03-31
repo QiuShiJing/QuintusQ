@@ -1,6 +1,6 @@
 <html>
 <head>  
-<title>×¢²á½çÃæ</title>  
+<title>æ³¨å†Œç•Œé¢</title>  
 <script language="JavaScript">  
     function isValidate(form)  
     {  
@@ -13,7 +13,7 @@
 /* ********FOUND********* */
         if(userpass2 != userpass2)  
         {  
-            alert("Á½´ÎÊäÈëµÄ¿ÚÁî²»ÏàÍ¬£¡");
+            alert("ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸ç›¸åŒï¼");
 	    form.userpass.focus();
 	    return false;  
         }  
@@ -21,7 +21,7 @@
 /* ********FOUND********* */
         if(!isDate(birthday))  
         {  
-            alert("ÉúÈÕµÄ¸ñÊ½²»ÕıÈ·£¡");  
+            alert("ç”Ÿæ—¥çš„æ ¼å¼ä¸æ­£ç¡®ï¼");  
             form.birthday.focus();  
             return false;  
         }  
@@ -29,11 +29,11 @@
 /* ********FOUND********* */
         if(!isMail(email))  
         { 
-	    alert("Email¸ñÊ½²»ÕıÈ·£¡");  
+	    alert("Emailæ ¼å¼ä¸æ­£ç¡®ï¼");  
             form.email.focus();  
             return false;  
         }  
-        // ÑéÖ¤µç»°ºÅÂëµÄ¸ñÊ½ÊÇ·ñÕıÈ·  
+        // éªŒè¯ç”µè¯å·ç çš„æ ¼å¼æ˜¯å¦æ­£ç¡®  
     }  
 
 
@@ -42,7 +42,7 @@
     {  
         for(i=0;i<str.length;i++)  
         {  
-            // Èç¹ûÒªÅĞ¶ÏĞ¡Êı£¬ĞèÒªÅĞ¶ÏĞ¡Êıµã  
+            // å¦‚æœè¦åˆ¤æ–­å°æ•°ï¼Œéœ€è¦åˆ¤æ–­å°æ•°ç‚¹  
             if(str.charAt(i)>='0' && str.charAt(i)<='9' 
 			|| str.charAt(i)=="-" && i==0)  
                 continue;  
@@ -54,39 +54,39 @@
       
     function isDate(date)  
     {  
-        // ²éÕÒ·Ö¸ô·û
+        // æŸ¥æ‰¾åˆ†éš”ç¬¦
 		index1 = date.indexOf("-");  
-        // Èç¹û·Ö¸ô·û²»´æÔÚ£¬Ôò²»ÊÇºÏ·¨µÄÊ±¼ä  
+        // å¦‚æœåˆ†éš”ç¬¦ä¸å­˜åœ¨ï¼Œåˆ™ä¸æ˜¯åˆæ³•çš„æ—¶é—´  
         if(index1 == -1)  
             return false;  
-        // »ñÈ¡Ê±¼äÖĞµÄÄê  
+        // è·å–æ—¶é—´ä¸­çš„å¹´  
         year = date.substring(0,index1);  
-        // »ñÈ¡Ê±¼äÖĞµÄÊ£ÏÂ²¿·Ö  
+        // è·å–æ—¶é—´ä¸­çš„å‰©ä¸‹éƒ¨åˆ†  
         date = date.substring(index1+1);  
-        // ²éÕÒµÚ¶ş¸ö·Ö¸ô·û  
+        // æŸ¥æ‰¾ç¬¬äºŒä¸ªåˆ†éš”ç¬¦  
         index1 = date.indexOf("-");  
-        // Èç¹û²»´æÔÚµÚ¶ş¸ö·Ö¸ô·û£¬Ôò²»ÊÇºÏ·¨µÄÊ±¼ä
+        // å¦‚æœä¸å­˜åœ¨ç¬¬äºŒä¸ªåˆ†éš”ç¬¦ï¼Œåˆ™ä¸æ˜¯åˆæ³•çš„æ—¶é—´
 		if(index1 == -1)  
             return false;  
-        // »ñÈ¡Ê±¼äÖĞµÄÔÂ·İ  
+        // è·å–æ—¶é—´ä¸­çš„æœˆä»½  
         month = date.substring(0,index1);  
-        // »ñÈ¡Ê±¼äÖĞµÄÈÕ  
+        // è·å–æ—¶é—´ä¸­çš„æ—¥  
         day = date.substring(index1+1);  
-        // ÅĞ¶ÏÊÇ·ñÊÇÊı×Ö£¬Èç¹û²»ÊÇÔò²»ÊÇºÏ·¨µÄÊ±¼ä  
+        // åˆ¤æ–­æ˜¯å¦æ˜¯æ•°å­—ï¼Œå¦‚æœä¸æ˜¯åˆ™ä¸æ˜¯åˆæ³•çš„æ—¶é—´  
         if(isNumber(year) && isNumber(month) && isNumber(day))  
         {  
-            // ÅĞ¶Ï»ù±¾·¶Î§  
+            // åˆ¤æ–­åŸºæœ¬èŒƒå›´  
             if(year<1900 || year>9999 || month<1 || month >12 || day<1) 
 			return false;  
-            // ÅĞ¶Ï31ÌìµÄÔÂ  
+            // åˆ¤æ–­31å¤©çš„æœˆ  
             if((month==1 || month==3 || month==5 || month==7  
             || month==8 || month==10 || month==12) && day>31)  
                 return false;  
-            // ÅĞ¶Ï30ÌìµÄÔÂ  
+            // åˆ¤æ–­30å¤©çš„æœˆ  
             if((month==4 || month==6 || month==9 || month==11)  
                 && day>30)  
                 return false;  
-            // Èç¹ûÊÇ2ÔÂ£¬ÅĞ¶ÏÊÇ·ñÎªÈóÄê  
+            // å¦‚æœæ˜¯2æœˆï¼Œåˆ¤æ–­æ˜¯å¦ä¸ºæ¶¦å¹´  
             if(month==2)  
             {
 		if(year%400==0 || (year%4==0 && year%100!=0))  
@@ -104,17 +104,17 @@
             return false;  
         return true;  
     }  
-    // ÅĞ¶ÏÊÇ·ñÊÇEmail  
+    // åˆ¤æ–­æ˜¯å¦æ˜¯Email  
     function isEmail(email)  
     {  
         if(email.length==0)  
             return false;  
         index1 = email.indexOf('@');  
         index2 = email.indexOf('.');
-		if(index1 < 1              // @·ûºÅ²»´æÔÚ£¬»òÕßÔÚµÚÒ»¸öÎ»ÖÃ  
-        || index2 < 1          // .·ûºÅ²»´æÔÚ£¬»òÕßÔÚµÚÒ»¸öÎ»ÖÃ  
-        || index2-index1 <2    // .ÔÚ@µÄ×ó±ß»òÕßÏàÁÚ  
-        || index2+1 == email.length) // .·ûºÅºóÃæÃ»ÓĞ¶«Î÷  
+		if(index1 < 1              // @ç¬¦å·ä¸å­˜åœ¨ï¼Œæˆ–è€…åœ¨ç¬¬ä¸€ä¸ªä½ç½®  
+        || index2 < 1          // .ç¬¦å·ä¸å­˜åœ¨ï¼Œæˆ–è€…åœ¨ç¬¬ä¸€ä¸ªä½ç½®  
+        || index2-index1 <2    // .åœ¨@çš„å·¦è¾¹æˆ–è€…ç›¸é‚»  
+        || index2+1 == email.length) // .ç¬¦å·åé¢æ²¡æœ‰ä¸œè¥¿  
             return false  
         else  
             return true;  
@@ -122,58 +122,58 @@
 </script>  
 </head>  
 <body>  
-<h2 align="center">Çë×¢²á</h2>  
+<h2 align="center">è¯·æ³¨å†Œ</h2>  
 <form name="form1" onsubmit="isVaildate(this)">  
 <table align="center">  
 <tr>
-  <td align="center">ÓÃ»§Ãû£º</td>
+  <td align="center">ç”¨æˆ·åï¼š</td>
   <td><input type="text" name="userid" value="qiushijing"></td></tr>  
 <tr>
-<td align="center"> ÃÜÂë£º</td>
+<td align="center"> å¯†ç ï¼š</td>
 <td><input type="password" name="userpass" align="right"></td></tr>
 
 <tr>
-<td align="center"> È·ÈÏÃÜÂë£º</td>
+<td align="center"> ç¡®è®¤å¯†ç ï¼š</td>
 <td><input type="password" name="userpass2"></td></tr> 
  
 <tr>
-<td align="center">ÉúÈÕ£º</td>
-<td><input type="text" name="birthday" >¸ñÊ½Îª£º1988-1-1</td></tr>  
+<td align="center">ç”Ÿæ—¥ï¼š</td>
+<td><input type="text" name="birthday" >æ ¼å¼ä¸ºï¼š1988-1-1</td></tr>  
 
 <tr>
-<td align="center"> Ñ§Àú£º</td> 
-    <td><input type="radio" name="xueli" value="×¨¿Æ">×¨¿Æ  
-        <input type="radio" name="xueli" value="±¾¿Æ" checked>±¾¿Æ 
-        <input type="radio" name="xueli" value="Ë¶Ê¿ÑĞ¾¿Éú">Ë¶Ê¿ÑĞ¾¿Éú  
-        <input type="radio" name="xueli" value="²©Ê¿ÑĞ¾¿Éú">²©Ê¿ÑĞ¾¿Éú  
-        <input type="radio" value="ÆäËû">ÆäËû</td></tr>  
+<td align="center"> å­¦å†ï¼š</td> 
+    <td><input type="radio" name="xueli" value="ä¸“ç§‘">ä¸“ç§‘  
+        <input type="radio" name="xueli" value="æœ¬ç§‘" checked>æœ¬ç§‘ 
+        <input type="radio" name="xueli" value="ç¡•å£«ç ”ç©¶ç”Ÿ">ç¡•å£«ç ”ç©¶ç”Ÿ  
+        <input type="radio" name="xueli" value="åšå£«ç ”ç©¶ç”Ÿ">åšå£«ç ”ç©¶ç”Ÿ  
+        <input type="radio" value="å…¶ä»–">å…¶ä»–</td></tr>  
         
 <tr>
-<td align="center"> µØÇø£º  </td>
+<td align="center"> åœ°åŒºï¼š  </td>
     <td><select>  
-		<option value="»ª¶«">»ª¶«</option> 
-		<option value="»ªÄÏ" selected>»ªÄÏ</option>  
-		<option value="»ª±±">»ª±±</option>  
-		<option value="¶«±±" >¶«±±</option>  
-		<option value="¶«ÄÏ">¶«ÄÏ</option>  
-		<option value="Î÷ÄÏ">Î÷ÄÏ</option>  
-		<option value="Î÷±±">Î÷±±</option>  
-		<option value="»ªÖĞ">»ªÖĞ</option>  
+		<option value="åä¸œ">åä¸œ</option> 
+		<option value="åå—" selected>åå—</option>  
+		<option value="ååŒ—">ååŒ—</option>  
+		<option value="ä¸œåŒ—" >ä¸œåŒ—</option>  
+		<option value="ä¸œå—">ä¸œå—</option>  
+		<option value="è¥¿å—">è¥¿å—</option>  
+		<option value="è¥¿åŒ—">è¥¿åŒ—</option>  
+		<option value="åä¸­">åä¸­</option>  
     </select></td></tr>  
     
 <tr>
-<td align="center"> E-mail£º</td>
+<td align="center"> E-mailï¼š</td>
 <td><input type="text" name="email"></td></tr>
      
 <tr>
-<td align="center"> ±¸×¢£º</td>
+<td align="center"> å¤‡æ³¨ï¼š</td>
 <td><textarea rows="8" cols="40" value="1222222"></textarea></td></tr> 
 
 <tr>
 <td>&nbsp;</td>
-<td > <input type="reset" value="ÖØÖÃ">  
-   <input type="submit" value="Ìá½»">
-    <input type="submit" name="button" value="¹Ø±Õ´°¿Ú" onclick="window.close()"></td></tr>  
+<td > <input type="reset" value="é‡ç½®">  
+   <input type="submit" value="æäº¤">
+    <input type="submit" name="button" value="å…³é—­çª—å£" onclick="window.close()"></td></tr>  
    </table>  
 </form>  
 </body>  
